@@ -7,7 +7,7 @@ public class task3 {
         Random rand = new Random();
         int [] arr = new int[count];
         for (int i = 0; i < arr.length; i++) {
-            arr[i] =  rand.nextInt(100);
+            arr[i] =  rand.nextInt();
             System.out.println(arr[i] + " ");
         }
         System.out.println();
