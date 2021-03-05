@@ -13,3 +13,4 @@ public class ot1n1 {
         System.out.print("\nСамое короткое число: " + shortInt + " Длина: " + shortInt.length());
     }
 }
+
