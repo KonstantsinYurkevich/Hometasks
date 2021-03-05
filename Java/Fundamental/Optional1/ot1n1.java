@@ -1,30 +1,15 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class ot1n1 {
-    public static void main(String[] arg) {
-        Scanner console = new Scanner(System.in);
-        String str = console.nextLine();
-        String[] strArr = str.split(" ");
-        int[] arr = new int[strArr.length];
-        int max = 0;
-        for ( int i = 0; i < strArr.length; i ++) {
-            arr[i] = Integer.parseInt(strArr[i]);
-            if (arr[i] > max) {
-                max = arr[i];
-            }
+    public static void main(String [] args) {
+        Scanner scan = new Scanner(System.in);
+        String line = scan.nextLine();
+        String longInt = "", shortInt = line;
+        for (String s : line.split(" ")) {
+            if (s.length() > longInt.length()) longInt = s;
+            if (s.length() < shortInt.length()) shortInt = s;
         }
-        Arrays.sort(arr);
-        int min = arr[0];
-        int maxLength = (String.valueOf(max)).length();
-        int minLength = (String.valueOf(min)).length();
-
-
-        System.out.println(" Самое короткое число - " + min + " с длинной - " + minLength);
-        System.out.println(" Самое длинное число - " + max + " с длинной - " + maxLength);
-
-
-
+        System.out.print("Самое длинное число: " + longInt + " Длина: " + longInt.length());
+        System.out.print("\nСамое короткое число: " + shortInt + " Длина: " + shortInt.length());
     }
 }
-
